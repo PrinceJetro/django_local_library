@@ -1,0 +1,314 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gadgets</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="{% static 'more.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="bg-warning">
+    
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="index.html"><img src="{% static 'Jetro.jpg' %}" style="height:25px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="background-color:white;color: black"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto topnav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Payments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="checkout.html">Checkout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shipping and Delivery</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gadgets
+                </a>
+                <div class="dropdown-menu" style="background-color: black" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="men.html">Men Fashion</a>
+                    <a class="dropdown-item" href="game.html">Gaming Accessories</a>
+                    <a class="dropdown-item" href="female.html">Female Fashion</a>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            
+        </ul>
+    </div>
+
+        <!-- The Modal -->
+
+
+</nav>
+  
+  <div class="slider-container">
+            <div id="image-container">
+            <img src="https://mh.co.za/wp-content/uploads/2022/08/Screen-Shot-2018-03-08-at-10.13.08.png" alt="1">
+            </div>
+     </div><br><br>
+
+
+
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+    
+            <!-- Wrapper for carousel items -->
+<!-- Carousel controls -->
+
+
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+    <div class="item carousel-item active">
+        <div class="row">
+
+          {% for i in gadget %}
+          <div class="col-xs-6 col-sm-3 col-lg-3">
+            <div class="thumb-wrapper">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="{{i.imgLink}}" class="img-fluid" alt="">									
+                </div>
+                <div class="thumb-content">
+                    <h4 class="product-title">{{i.name}}</h4>									
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"> <b>{{i.price}}</b></p>
+                    <a href="#" class="cart btn btn-primary">Add to Cart</a>
+                </div>						
+            </div>
+        </div>			
+
+        {% endfor %}
+
+        
+        
+        </div>
+
+    </div>
+    
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<a href="checkout.html"> <button style="background-color: blue; color:white;margin:20px" class="btn btn-sm  border border-dark">Proceed To Checkout</button></a>
+
+
+
+
+<footer class="ct-footer">
+  <div class="container">
+    <form name="contentForm" enctype="multipart/form-data" method="post" action="">
+      <div class="ct-footer-pre text-center-lg">
+        <div class="inner">
+          <span>Join Jetro receive updates, news & events!</span>
+        </div>
+        <div class="inner">
+          <div class="form-group">
+            <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Enter your email address" type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label> <button type="submit" class="btn btn-motive">Join</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <ul class="ct-footer-list text-center-sm">
+      <li>
+        <h2 class="ct-footer-list-header">Learn More</h2>
+        <ul>
+          <li>
+            <a href="">Company</a>
+          </li><br>
+          <li>
+            <a href="">Contact Us</a>
+          </li><br>
+          <li>
+            <a href="">News</a>
+          </li><br>
+          <li>
+            <a href="">Payments</a>
+          </li><br>
+        </ul>
+      </li>
+      <li>
+        <h2 class="ct-footer-list-header">Services</h2>
+        <ul>
+          <li>
+            <a href="">Services We Offer</a>
+          </li><br>
+          <li>
+            <a href="">Shipping and Delivery</a>
+          </li><br>
+          <li>
+            <a href="">Return Policy</a>
+          </li><br>
+          <li>
+            <a href="">Privacy and Security</a>
+          </li><br>
+          <li>
+            <a href="">Support</a>
+          </li><br>
+        </ul>
+      </li>
+      <li>
+        <h2 class="ct-footer-list-header">Opening Hours</h2>
+        <ul class="black-list">
+          <li>
+           Store Opening Hours: 
+          </li><br>
+          <li>
+            Monday to Saturday : 9:00 am - 9:00 pm
+          </li><br>
+          <li>
+            Sundays : 11:00 am - 9:00pm
+          </li><br>
+          <li>
+            Company's Address: 
+          </li><br>
+          <li>
+            3, Ebun Olorun Street Off Olaniyi Street, Bariga, Lagos, Nigeria
+          </li><br>
+          <li>
+            Email : adegbuyijephthah@gmail.com
+          </li><br>
+          
+        </ul>
+      </li>
+    </ul>
+    <div class="ct-footer-meta text-center-sm">
+      <div class="row">
+        <div class="col-sm-6 col-md-2">
+          <img alt="logo" src="me.jpg" style="width: 50px;height:50px">
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <address>
+            <span>Jetro's Store<br></span>3, Ebun Olorun Street<br>
+            Bariga, Lagos, Nigeria<br>
+            <span>Phone: <a href="tel:2348088981691">+2348088981691</a></span>
+          </address>
+        </div>
+        <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+          <a href="" target="_blank"><img alt="app store" src="https://www.solodev.com/assets/footer/appstore.png"></a>
+        </div>
+        <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+          <a href="" target="_blank"><img alt="google play store" src="https://www.solodev.com/assets/footer/androidstore.png"></a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <ul class="ct-socials list-unstyled list-inline">
+            <li>
+              <a href="https://wa.me/2348088981691" target="_blank"><i class="fa fa-whatsapp" style="font-size:40px"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/jerex-amon" target="_blank"><i class="fa fa-facebook" style="font-size:40px"></i></a>
+            </li>
+            <li>
+              <a href="www.instagram.com/princejetro123" target="_blank"><i class="fa fa-instagram" style="font-size:40px"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/jephthah-adegbuyi-38a76524a" target="_blank"><i class="fa fa-linkedin" style="font-size:40px"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/PrinceJetro123" target="_blank"><i class="fa fa-twitter" style="font-size:40px"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ct-footer-post">
+    <div class="container">
+      <div class="inner-left">
+        <ul>
+          <li>
+            <a href="">FAQ</a>
+          </li>
+          <li>
+            <a href="">News</a>
+          </li>
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-right">
+        <p>Copyright © 2016 WebCorpCo.&nbsp;<a href="">Privacy Policy</a></p>
+        <p><a class="ct-u-motive-color" href="" target="_blank">Web Design</a> by Prince Jetro on <a href="mailto: adegbuyijephthah@gmail.com" target="_blank">adegbuyijephthah@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="gadget.js"></script>
+</body>
+</html>
